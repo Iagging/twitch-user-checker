@@ -62,7 +62,7 @@ class twitch:
                 self.available += 1
                 self.print_console("Available or Banned", username, Fore.GREEN)
                 webhook = DiscordWebhook(url='https://discord.com/api/webhooks/988163013364314192/64YxDDY-Q-RiduKgLaE83E4eGbcDLSbTbV_-Xwt2cEkkYncOqdyp6LyABdDuLArWWlP1', rate_limit_retry=True)
-                embed = DiscordEmbed(title='Balance | Twitch Checker', description=f'**{username}** Is Avaliable')
+                embed = DiscordEmbed(title='lag | Twitch Checker', description=f'**{username}** Is Avaliable')
                 webhook.add_embed(embed)
                 response = webhook.execute()
 
@@ -89,7 +89,7 @@ class twitch:
     def main(self):
         os.system(clear)
         if clear == "cls":
-            ctypes.windll.kernel32.SetConsoleTitleW("Balance Checker")
+            ctypes.windll.kernel32.SetConsoleTitleW("lag Checker")
         self.load_usernames()
         threads = int(input(f"       {Fore.WHITE}[{Fore.RED}Console{Fore.WHITE}] Threads: "))
         print()
